@@ -61,6 +61,21 @@ html, body {
 
 .comment-input-field {
     margin: 15px 0px;
+    border: none;
+    padding: 10px 5px; 
+    border-radius: 8px;
+    text-align: center;
+    color: #432000;
+    background-color: #DCE1EB
+}
+
+.comment-submit-btn {
+    border: none; 
+    padding: 5px;
+    color: #FDFDFD;
+    background-color: #AC485A;
+    font-size: 24px;
+    border-radius: 8px;
 }
 
 /* .util-box-border-red {

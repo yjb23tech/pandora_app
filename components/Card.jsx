@@ -3,6 +3,17 @@ import artist_icon from "../public/images/artist_icon.png"
 import genre_icon from "../public/images/genre_icon.png"
 
 const Card = (props) => {
+
+    function handleClick(e) {
+
+        e.preventDefault()
+        let inputBtn = document.getElementById("comment-input")
+        let inputBtnValue = inputBtn.value
+        console.log("Frankenstein's Monster!")
+        console.log(inputBtnValue)
+
+    }
+    
     return (
         <div className="song-card util-box-border-blue">
             <img src={`images/${props.song_card_img}`} />
@@ -22,7 +33,7 @@ const Card = (props) => {
                 </div>
                 <div className="comment-section">
                     <input className="comment-input-field" id="comment-input" type="text" placeholder="leave a comment :D" />
-                    <button className="comment-submit-btn" id="comment-submit">GO!</button>
+                    <button className="comment-submit-btn" id="comment-submit" onClick={handleClick}>GO!</button>
                 </div>
             </div>
         </div>
