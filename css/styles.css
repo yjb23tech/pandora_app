@@ -3,3 +3,49 @@ html, body {
     margin: 0;
 }
 
+.song-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+}
+
+.song-card > img {
+    width: 250px;
+    height: 250px;
+}
+
+/* .song-card-contents {
+
+} */
+
+.song-card-contents > h2 {
+    text-align: center;
+}
+
+.info-group {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+}
+
+.info-group > img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.comment-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.util-box-border-red {
+    border: 1px dotted red;
+}
+
+.util-box-border-blue {
+    border: 1px dotted blue;
+}
+
