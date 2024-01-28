@@ -1,3 +1,6 @@
+import { db } from "../firebase/firebase.js"
+import { ref, push, onValue } from "firebase/database"
+
 import album_icon from "../public/images/album_icon.png"
 import artist_icon from "../public/images/artist_icon.png"
 import genre_icon from "../public/images/genre_icon.png"
@@ -7,13 +10,19 @@ const Card = (props) => {
     function handleClick(e) {
 
         e.preventDefault()
+
+        const pandoraCommentsDB = ref(db, "pandorasbox")
+    
         let inputBtn = document.getElementById("comment-input")
         let inputBtnValue = inputBtn.value
+
+        push(pandoraCommentsDB, inputBtnValue)
+
         console.log("Frankenstein's Monster!")
         console.log(inputBtnValue)
 
     }
-    
+
     return (
         <div className="song-card util-box-border-blue">
             <img src={`images/${props.song_card_img}`} />
