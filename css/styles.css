@@ -1,32 +1,46 @@
 html, body {
     padding: 0;
     margin: 0;
+    background-color: whitesmoke;
 }
 
 .song-card {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    width: 800px;
+    /* justify-content: center;
+    align-items: center; */
+    width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
 }
 
 .song-card > img {
     width: 250px;
     height: 250px;
+    border-radius: 12px;
 }
 
-/* .song-card-contents {
+/* worked as intended */
+.song-card-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto; 
 
-} */
+}
 
 .song-card-contents > h2 {
     text-align: center;
+    margin: 0px; 
 }
 
 .info-group {
     display: flex; 
     flex-direction: row;
     align-items: center;
+    margin: 10px; 
 }
 
 .info-group > img {
@@ -35,17 +49,25 @@ html, body {
     margin-right: 5px;
 }
 
+.info-group > p {
+    margin: 0px;
+}
+
 .comment-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.util-box-border-red {
+.comment-input-field {
+    margin: 15px 0px;
+}
+
+/* .util-box-border-red {
     border: 1px dotted red;
 }
 
 .util-box-border-blue {
     border: 1px dotted blue;
-}
+} */
 

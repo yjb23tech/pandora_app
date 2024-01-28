@@ -4,9 +4,9 @@ import genre_icon from "../public/images/genre_icon.png"
 
 const Card = (props) => {
     return (
-        <div className="song-card">
+        <div className="song-card util-box-border-blue">
             <img src={`images/${props.song_card_img}`} />
-            <div className="song-card-contents">
+            <div className="song-card-contents util-box-border-red">
                 <h2>{props.song_card_song_title}</h2>
                 <div className="info-group">
                     <img src={album_icon} />
@@ -21,8 +21,8 @@ const Card = (props) => {
                     <p>{props.song_card_genre_name}</p>
                 </div>
                 <div className="comment-section">
-                    <input id="comment-input" type="text" placeholder="leave a comment :D" />
-                    <button id="comment-submit">GO!</button>
+                    <input className="comment-input-field" id="comment-input" type="text" placeholder="leave a comment :D" />
+                    <button className="comment-submit-btn" id="comment-submit">GO!</button>
                 </div>
             </div>
         </div>
