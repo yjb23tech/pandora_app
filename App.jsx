@@ -12,7 +12,17 @@ const App = () => {
                 song_card_album_name = "My Beautiful Dark Twisted Fantasy"
                 song_card_artist_name = "Kanye West"
                 song_card_genre_name = "Baroque Sophisticated Ignorance"
+                song_card_id = "1"
 
+            />
+
+            <Card 
+                song_card_img = "track_8_song_art.png"
+                song_card_song_title = "Runway"
+                song_card_album_name = "My Beautiful Dark Twisted Fantasy"
+                song_card_artist_name = "Kanye West"
+                song_card_genre_name = "Baroque Sophisticated Ignorance"
+                song_card_id = "2"
             />
         </div>
     )

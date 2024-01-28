@@ -13,13 +13,22 @@ const Card = (props) => {
 
         const pandoraCommentsDB = ref(db, "pandorasbox")
     
-        let inputBtn = document.getElementById("comment-input")
+        let inputBtn = document.getElementById(`${props.song_card_id}`)
         let inputBtnValue = inputBtn.value
 
         push(pandoraCommentsDB, inputBtnValue)
 
         console.log("Frankenstein's Monster!")
         console.log(inputBtnValue)
+
+        onValue(pandoraCommentsDB, function(snapshot) {
+            let pandoraCommentsArray = Object.values(snapshot.val())
+            console.log(pandoraCommentsArray)
+
+            for (let i = 0; i < pandoraCommentsArray.length; i++) {
+                console.log(pandoraCommentsArray[i])
+            }
+        })
 
     }
 
@@ -41,7 +50,7 @@ const Card = (props) => {
                     <p>{props.song_card_genre_name}</p>
                 </div>
                 <div className="comment-section">
-                    <input className="comment-input-field" id="comment-input" type="text" placeholder="leave a comment :D" />
+                    <input className="comment-input-field" id={props.song_card_id} type="text" placeholder="leave a comment :D" />
                     <button className="comment-submit-btn" id="comment-submit" onClick={handleClick}>GO!</button>
                 </div>
             </div>
